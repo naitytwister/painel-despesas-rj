@@ -86,7 +86,7 @@ footer.footer{margin-top:24px;padding:16px 0;border-top:1px solid var(--line);fo
     <div class="eyebrow">Leitura fiscal · SICONFI</div>
     <h1>Despesas empenhadas em perspectiva</h1>
     <p>Como os recursos municipais do Rio de Janeiro se distribuem entre funções e como o total evoluiu ao longo dos últimos seis exercícios.</p>
-    <div class="period"><span class="dot"></span>Exercícios de 2020 a 2025 · valores nominais</div>
+    <div class="period"><span class="dot"></span>2020–2025 · valores nominais · total exceto intraorçamentárias</div>
     <div class="colectai-logo">
       <svg class="colectai-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none">
         <rect width="42" height="42" y="7" rx="10" fill="#0B1528"/>
@@ -99,24 +99,24 @@ footer.footer{margin-top:24px;padding:16px 0;border-top:1px solid var(--line);fo
   </header>
   <section class="stats" aria-label="Indicadores principais">
     <div class="card stat">
-      <span class="label">Total empenhado · 2025</span>
-      <strong class="value" id="statTotal">R$ 0,0 mi</strong>
-      <span class="note">Despesas consolidadas no exercício</span>
+      <span class="label">Total empenhado · 2025 (exceto intra)</span>
+      <strong class="value" id="statTotal">R$ 39,1 bi</strong>
+      <span class="note">Base conciliada com a despesa por função</span>
     </div>
     <div class="card stat">
       <span class="label">Variação nominal · 2025 vs 2024</span>
-      <strong class="value" id="statVar">+0,0%</strong>
-      <span class="note" id="statVarNote">—</span>
+      <strong class="value" id="statVar">−1,3%</strong>
+      <span class="note" id="statVarNote">R$ 39,6 bi → R$ 39,1 bi</span>
     </div>
     <div class="card stat">
       <span class="label">Crescimento acumulado · 2020–2025</span>
-      <strong class="value" id="statAcum">+0,0%</strong>
-      <span class="note">R$ 0,0 mi → R$ 0,0 mi</span>
+      <strong class="value" id="statAcum">+55,2%</strong>
+      <span class="note">R$ 25,2 bi → R$ 39,1 bi</span>
     </div>
     <div class="card stat">
       <span class="label">Maior função · 2025</span>
-      <strong class="value" id="statTop">—</strong>
-      <span class="note" id="statTopNote">—</span>
+      <strong class="value" id="statTop">Saúde</strong>
+      <span class="note" id="statTopNote">R$ 7.754,1 mi · 19,8% do total exceto intra</span>
     </div>
   </section>
   <section class="grid">
@@ -130,7 +130,7 @@ footer.footer{margin-top:24px;padding:16px 0;border-top:1px solid var(--line);fo
       </div>
       <svg id="barChart" class="chart" role="img" aria-label="Gráfico de barras horizontais de despesas por função"></svg>
       <div id="functionLegend" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;"></div>
-      <p class="footnote" id="functionFoot">Total de R$ 0,0 mi em despesas empenhadas no exercício.</p>
+      <p class="footnote" id="functionFoot">Total de R$ 39,1 bi em despesas empenhadas, exceto intraorçamentárias, no exercício.</p>
       <div class="callout">O top 8 é ordenado pelo valor empenhado observado na base do SICONFI.</div>
     </article>
     <article class="panel">
@@ -139,44 +139,44 @@ footer.footer{margin-top:24px;padding:16px 0;border-top:1px solid var(--line);fo
           <h2>Comparativo anual</h2>
           <p>Despesas empenhadas · 2024 e 2025</p>
         </div>
-        <span style="background:#f3f8fa;color:#0A1F44;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:700;">Variação nominal</span>
+        <span style="background:#f3f8fa;color:#0A1F44;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:700;">R$ bilhões · variação nominal</span>
       </div>
       <svg id="compareChart" class="chart" role="img" aria-label="Comparação de despesas de 2024 e 2025"></svg>
-      <div class="callout"><strong>+0,0% nominal.</strong> A variação pode refletir crescimento real, inflação ou ambos; os valores não estão corrigidos pelo IPCA.</div>
+      <div class="callout"><strong id="compareCalloutHeadline">−1,3% nominal.</strong> O sinal nominal não indica, por si só, ganho ou perda real; os valores não estão corrigidos pelo IPCA.</div>
     </article>
   </section>
   <section class="panel" style="margin-top:16px;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
       <div>
         <h2>Série histórica · 2020–2025</h2>
-        <p>Despesa empenhada total por exercício</p>
+        <p>Despesa empenhada por exercício (exceto intraorçamentárias) · R$ bilhões</p>
       </div>
-      <div class="trend-stat" style="font-size:16px;"><b id="trendStat">+0,0%</b><span>crescimento acumulado nominal</span></div>
+      <div class="trend-stat" style="font-size:16px;display:flex;gap:6px;align-items:center;"><b id="trendStat">+55,2%</b><span>crescimento acumulado nominal</span></div>
     </div>
     <svg id="lineChart" class="chart" role="img" aria-label="Gráfico de linhas de despesas empenhadas entre 2020 e 2025"></svg>
     <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font-size:12px;color:var(--gray);">
-      <span>2020 · R$ <span id="y2020">0,0</span> mi</span>
-      <span>2021 · R$ <span id="y2021">0,0</span> mi</span>
-      <span>2022 · R$ <span id="y2022">0,0</span> mi</span>
-      <span>2023 · R$ <span id="y2023">0,0</span> mi</span>
-      <span>2024 · R$ <span id="y2024">0,0</span> mi</span>
-      <span>2025 · R$ <span id="y2025">0,0</span> mi</span>
+      <span>2020 · R$ <span id="y2020">25,2</span> bi</span>
+      <span>2021 · R$ <span id="y2021">26,9</span> bi</span>
+      <span>2022 · R$ <span id="y2022">32,7</span> bi</span>
+      <span>2023 · R$ <span id="y2023">37,0</span> bi</span>
+      <span>2024 · R$ <span id="y2024">39,6</span> bi</span>
+      <span>2025 · R$ <span id="y2025">39,1</span> bi</span>
     </div>
-    <p class="footnote">Valores nominais, sem ajuste inflacionário.</p>
+    <p class="footnote">Valores nominais, sem ajuste inflacionário. A série exclui despesas intraorçamentárias; a soma das funções concilia com esse total em cada exercício.</p>
   </section>
   <section style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
     <article class="panel">
       <h3>Como ler estes números</h3>
-      <p>“Despesa empenhada” é o valor comprometido pela administração no exercício. Este painel não equivale a despesas liquidadas ou pagas. O comparativo e a série usam o total anual consolidado reportado no CSV.</p>
+        <p>“Despesa empenhada” é o valor comprometido pela administração no exercício. Este painel não equivale a despesas liquidadas ou pagas. O total exibido exclui despesas intraorçamentárias para manter a mesma base do gráfico por função.</p>
     </article>
     <article class="panel">
       <h3>Fonte e critérios</h3>
       <ul style="font-size:12px;color:var(--gray);padding-left:18px;">
-        <li>Fonte primária: SICONFI/Tesouro Nacional, DCA – Anexo I-E, Prefeitura Municipal do Rio de Janeiro/RJ.</li>
-        <li><a href="dados_rj.csv" download>Baixar CSV original anexado ao projeto</a> · dados usados na análise.</li>
-        <li>Filtro: coluna “Despesas Empenhadas”; agrupamento por nível Total e Função.</li>
-        <li>Valores em reais convertidos para R$ milhões e arredondados para apresentação.</li>
-        <li>O gráfico por função mostra o top 8 real do arquivo, não uma seleção manual.</li>
+        <li>Fonte primária: API SICONFI/Tesouro Nacional, DCA – Anexo I-E, Prefeitura Municipal do Rio de Janeiro/RJ (IBGE 3304557), exercícios 2020–2025.</li>
+        <li><a href="siconfi_rio_de_janeiro.csv" download>Baixar CSV bruto (retorno da API)</a> · <a href="dados_rj.csv" download>CSV normalizado</a>.</li>
+        <li>Filtro: “Despesas Empenhadas”. O total principal usa “Despesas Exceto Intraorçamentárias”; sua soma reconcilia com as funções agregadas informadas no respectivo exercício.</li>
+        <li>Funções em R$ milhões; total anual em R$ bilhões. Valores nominais, sem correção pela inflação.</li>
+        <li>O seletor mostra as oito maiores funções observadas em cada ano, ordenadas por valor empenhado.</li>
       </ul>
     </article>
   </section>
@@ -190,7 +190,7 @@ footer.footer{margin-top:24px;padding:16px 0;border-top:1px solid var(--line);fo
       </svg>
       <span class="colectai-text">Colect<tspan>ai</tspan></span>
     </div>
-    <div style="margin-top:6px;">Rio de Janeiro/RJ · Painel analítico SICONFI · Atualizado a partir do CSV fornecido · Valores nominais</div>
+    <div style="margin-top:6px;">Rio de Janeiro/RJ · Painel analítico SICONFI · Consulta à API em 27/10/2026 · Valores nominais</div>
   </footer>
 </div>
 <script src="script.js"></script>
